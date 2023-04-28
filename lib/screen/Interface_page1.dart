@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:robot_app/screen/Interface_page2.dart';
 
 class Interface1 extends StatelessWidget {
   const Interface1({super.key});
@@ -104,21 +105,34 @@ class Interface1 extends StatelessWidget {
               SizedBox(
                 width: 60,
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  height: 40,
-                  width: 100,
-                  child: Center(
-                    child: Text(
-                      'Manual',
-                      style: TextStyle(fontSize: 18, color: Colors.black),
+              GestureDetector(
+                onTap: () {},
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Interface2(),
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
+                      height: 40,
+                      width: 100,
+                      child: Center(
+                        child: Text(
+                          'Manual',
+                          style: TextStyle(fontSize: 18, color: Colors.black),
+                        ),
+                      ),
                     ),
                   ),
                 ),
