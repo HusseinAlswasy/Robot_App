@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:robot_app/screen/Interface_page1.dart';
-import 'package:robot_app/screen/Interface_page2.dart';
+import 'package:robot_app/widget/CircleAvatar.dart';
+import 'package:robot_app/widget/button.dart';
 
 class Interface3 extends StatelessWidget {
   const Interface3({super.key});
@@ -11,10 +11,7 @@ class Interface3 extends StatelessWidget {
       backgroundColor: Color(0xff1746A2),
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
-        ),
+        automaticallyImplyLeading: false,
         title: Text(
           'Interface',
           style: TextStyle(color: Colors.black, fontSize: 25),
@@ -28,21 +25,13 @@ class Interface3 extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 10, left: 20),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(25),
-                        ),
-                      ),
-                      height: 50,
-                      width: 130,
-                      child: Center(
-                        child: Text(
-                          'CAM 1',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                      ),
+                    child: Button(
+                      word: 'CAM 1',
+                      h: 50,
+                      w: 130,
+                      color: Color(0xff06113C),
+                      colorS: Colors.white,
+                      fonts: 18,
                     ),
                   ),
                   SizedBox(
@@ -50,21 +39,13 @@ class Interface3 extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(25),
-                        ),
-                      ),
-                      height: 50,
-                      width: 130,
-                      child: Center(
-                        child: Text(
-                          'CAM 2',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                      ),
+                    child: Button(
+                      word: 'CAM 2',
+                      h: 50,
+                      w: 130,
+                      color: Color(0xff06113C),
+                      colorS: Colors.white,
+                      fonts: 18,
                     ),
                   ),
                 ],
@@ -88,30 +69,17 @@ class Interface3 extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Interface1(),
-                        ),
-                      );
+                      Navigator.pop(context);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(left: 50, top: 10),
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(25),
-                          ),
-                        ),
-                        height: 40,
-                        width: 100,
-                        child: Center(
-                          child: Text(
-                            'Atuo',
-                            style: TextStyle(fontSize: 18, color: Colors.black),
-                          ),
-                        ),
+                      child: Button(
+                        word: 'Auto',
+                        h: 40,
+                        w: 100,
+                        color: Colors.white,
+                        colorS: Color(0xff06113C),
+                        fonts: 18,
                       ),
                     ),
                   ),
@@ -120,21 +88,13 @@ class Interface3 extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(25),
-                        ),
-                      ),
-                      height: 40,
-                      width: 100,
-                      child: Center(
-                        child: Text(
-                          'Manual',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
-                        ),
-                      ),
+                    child: Button(
+                      word: 'Manual',
+                      h: 40,
+                      w: 100,
+                      color: Color(0xff06113C),
+                      colorS: Colors.white,
+                      fonts: 18,
                     ),
                   ),
                 ],
@@ -157,11 +117,8 @@ class Interface3 extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
+                      Navigator.pop(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => Interface2(),
-                        ),
                       );
                     },
                     child: Text(
@@ -176,12 +133,21 @@ class Interface3 extends StatelessWidget {
                   SizedBox(
                     width: 110,
                   ),
-                  Text(
-                    'Arm',
-                    style: TextStyle(
+                  Container(
+                    padding: EdgeInsets.only(bottom: 3),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
                       color: Colors.orange,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      width: 3.0, // Underline thickness
+                    ))),
+                    child: Text(
+                      'Arm',
+                      style: TextStyle(
+                        color: Colors.orange,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ],
@@ -194,169 +160,78 @@ class Interface3 extends StatelessWidget {
                   SizedBox(
                     width: 15,
                   ),
-                  Container(
-                    height: 40,
-                    width: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(25),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '4',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
+                  Button(
+                    word: '4',
+                    h: 40,
+                    w: 50,
+                    color: Colors.white,
+                    colorS: Colors.black,
+                    fonts: 20,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Container(
-                    height: 40,
-                    width: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(25),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '3',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
+                  Button(
+                    word: '3',
+                    h: 40,
+                    w: 50,
+                    color: Colors.white,
+                    colorS: Colors.black,
+                    fonts: 20,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Container(
-                    height: 40,
-                    width: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(25),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
+                  Button(
+                    word: '2',
+                    h: 40,
+                    w: 50,
+                    color: Colors.white,
+                    colorS: Colors.black,
+                    fonts: 20,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Container(
-                    height: 40,
-                    width: 50,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(25),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '1',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
+                  Button(
+                    word: '1',
+                    h: 40,
+                    w: 50,
+                    color: Colors.white,
+                    colorS: Colors.black,
+                    fonts: 20,
                   ),
                   SizedBox(
                     width: 30,
                   ),
-                  Container(
-                    height: 40,
-                    width: 80,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(25),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'All',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
+                  Button(
+                    word: 'All',
+                    h: 40,
+                    w: 80,
+                    color: Color(0xff06113C),
+                    colorS: Colors.white,
+                    fontw: FontWeight.bold,
+                    fonts: 25,
                   ),
                 ],
               ),
               SizedBox(
                 height: 30,
               ),
-              CircleAvatar(
-                radius: 30,
-                backgroundColor: Colors.white,
-                child: Icon(
-                  Icons.arrow_drop_up_rounded,
-                  color: Colors.blue[900],
-                  size: 60,
-                ),
-              ),
+              CircleAvatarr(icon: Icons.arrow_drop_up_rounded),
               Row(
                 children: [
                   SizedBox(
                     width: 100,
                   ),
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.arrow_left_rounded,
-                      color: Colors.blue[900],
-                      size: 60,
-                    ),
-                  ),
+                  CircleAvatarr(icon: Icons.arrow_left_rounded),
                   SizedBox(
                     width: 40,
                   ),
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.arrow_right_rounded,
-                      color: Colors.blue[900],
-                      size: 60,
-                    ),
-                  ),
+                  CircleAvatarr(icon: Icons.arrow_right_rounded),
                 ],
               ),
-              CircleAvatar(
-                radius: 30,
-                backgroundColor: Colors.white,
-                child: Icon(
-                  Icons.arrow_drop_down_rounded,
-                  color: Colors.blue[900],
-                  size: 60,
-                ),
-              ),
+              CircleAvatarr(icon: Icons.arrow_drop_down_rounded),
               SizedBox(
                 height: 40,
               ),

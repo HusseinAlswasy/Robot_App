@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:robot_app/screen/Interface_page1.dart';
+import 'package:robot_app/widget/button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -66,25 +67,14 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xff06113C),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(25),
-                  ),
-                ),
-                height: 60,
-                width: 140,
-                child: const Center(
-                  child: Text(
-                    'Start',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+              child: Button(
+                word: 'Start',
+                h: 60,
+                w: 140,
+                color: Color(0xff06113C),
+                colorS: Colors.white,
+                fonts: 30,
+                fontw: FontWeight.bold,
               ),
             ),
           ],

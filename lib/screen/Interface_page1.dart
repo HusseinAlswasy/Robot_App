@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:robot_app/screen/Interface_page2.dart';
+import 'package:robot_app/widget/button.dart';
 
 class Interface1 extends StatelessWidget {
   const Interface1({super.key});
@@ -10,10 +11,7 @@ class Interface1 extends StatelessWidget {
       backgroundColor: Color(0xff1746A2),
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
-        ),
+        automaticallyImplyLeading: false,
         title: Text(
           'Interface',
           style: TextStyle(color: Colors.black, fontSize: 25),
@@ -25,21 +23,13 @@ class Interface1 extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 10, left: 20),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  height: 50,
-                  width: 130,
-                  child: Center(
-                    child: Text(
-                      'CAM 1',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
+                child: Button(
+                  word: 'CAM 1',
+                  h: 50,
+                  w: 130,
+                  color: Color(0xff06113C),
+                  colorS: Colors.white,
+                  fonts: 18,
                 ),
               ),
               SizedBox(
@@ -47,21 +37,13 @@ class Interface1 extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  height: 50,
-                  width: 130,
-                  child: Center(
-                    child: Text(
-                      'CAM 2',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
+                child: Button(
+                  word: 'CAM 2',
+                  h: 50,
+                  w: 130,
+                  color: Color(0xff06113C),
+                  colorS: Colors.white,
+                  fonts: 18,
                 ),
               ),
             ],
@@ -85,21 +67,13 @@ class Interface1 extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 50, top: 10),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  height: 40,
-                  width: 100,
-                  child: Center(
-                    child: Text(
-                      'Atuo',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
+                child: Button(
+                  word: 'Auto',
+                  h: 40,
+                  w: 100,
+                  color: Color(0xff06113C),
+                  colorS: Colors.white,
+                  fonts: 18,
                 ),
               ),
               SizedBox(
@@ -118,21 +92,13 @@ class Interface1 extends StatelessWidget {
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(top: 10),
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(25),
-                        ),
-                      ),
-                      height: 40,
-                      width: 100,
-                      child: Center(
-                        child: Text(
-                          'Manual',
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                        ),
-                      ),
+                    child: Button(
+                      word: 'Manual',
+                      h: 40,
+                      w: 100,
+                      color: Colors.white,
+                      colorS: Color(0xff06113C),
+                      fonts: 18,
                     ),
                   ),
                 ),
@@ -152,72 +118,26 @@ class Interface1 extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(25),
-                ),
-              ),
-              height: 50,
-              child: Padding(
-                padding: const EdgeInsets.all(3.0),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  height: 50,
-                  width: 210,
-                  child: Center(
-                    child: Text(
-                      'Start Collecting',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            child: Button(
+              word: 'Start Collecting',
+              h: 50,
+              w: 210,
+              color: Color(0xff06113C),
+              colorS: Colors.white,
+              fonts: 25,
+              fontw: FontWeight.bold,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(25),
-                ),
-              ),
-              height: 50,
-              child: Padding(
-                padding: const EdgeInsets.all(3.0),
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),
-                  ),
-                  height: 50,
-                  width: 210,
-                  child: Center(
-                    child: Text(
-                      'Start Check hen',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+            child: Button(
+              word: 'Start Check hen',
+              h: 50,
+              w: 210,
+              color: Color(0xff06113C),
+              colorS: Colors.white,
+              fonts: 25,
+              fontw: FontWeight.bold,
             ),
           ),
         ],
